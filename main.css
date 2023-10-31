@@ -1,9 +1,54 @@
 * {
     padding: 0;
     margin: 0;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    
 }
+
+/* #all-profile {
+    display: flex;
+    flex-wrap: wrap;
+} */
 
 img {
     height: 100px;
     width: 100px;
+    border-radius: 45% 45% 45% 45%;
+    margin-bottom: .5rem;
+}
+
+h1 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+margin-bottom: 1rem;
+}
+
+#githeader {
+    border: 1px solid gray;
+    margin-bottom: none;
+    margin-left: 1.5rem;
+    padding-bottom: none;
+    background-color: rgb(209, 209, 209);
+}
+
+#repos {
+    padding-top: none;
+    margin-top: none;
+    margin-left: 1.5rem;
+    border: 1px solid red;
+    background-color: rgb(209, 209, 209);
+}
+
+li {
+    list-style-type: none;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border: 1px solid grey;
 }

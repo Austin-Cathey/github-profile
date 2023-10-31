@@ -34,11 +34,13 @@ fetch(gitAPI).then((response) => {
     let gitUrl = document.createElement("a");
     gitUrl.innerHTML = parsedJsonResponse.login;
     gitUrl.href = parsedJsonResponse.html_url;
-    url.innerText = "GitHub: "  
+    url.innerText = "My GitHub: "  
 
     profileInfo.appendChild(url);
     url.appendChild(gitUrl);
 
-    
+
+
+
 
 })

@@ -39,8 +39,35 @@ fetch(gitAPI).then((response) => {
     profileInfo.appendChild(url);
     url.appendChild(gitUrl);
 
-
-
-
-
 })
+
+
+fetch(reposAPI).then((response) => {
+    return response.json();
+}).then((parsedJsonResponse) => {
+    console.log(parsedJsonResponse);
+
+    let reposAPI = document.createElement("ul");
+
+    let firstRepo = document.createElement("li");
+    let firstUrl = document.createElement("a");
+    firstUrl.innerHTML = parsedJsonResponse[0]["name"];
+    firstUrl.href = parsedJsonResponse[0]["html_url"];
+    repos.appendChild(firstRepo);
+    firstRepo.appendChild(firstUrl);
+
+    let secondRepo = document.createElement("li");
+    let secondUrl = document.createElement("a");
+    secondUrl.innerText = parsedJsonResponse[1]["name"];
+    secondUrl.href = parsedJsonResponse[1]["html_url"];
+    repos.appendChild(secondRepo);
+    secondRepo.appendChild(secondUrl);
+
+    let thirdRepo = document.createElement("li");
+    let thirdUrl = document.createElement("a");
+    thirdUrl.innerText = parsedJsonResponse[2]["name"];
+    thirdUrl.href = parsedJsonResponse[2]["html_url"];
+    repos.appendChild(thirdRepo);
+    thirdRepo.appendChild(thirdUrl);
+
+});
